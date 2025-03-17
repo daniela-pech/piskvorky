@@ -5,7 +5,10 @@
     font-family: "Lobster";
     font-weight: lighter;
     font-size: 45px;
+  }
 
+  p {
+    line-height: 1.5;
   }
 
   body {
@@ -52,23 +55,28 @@
 
   .piskvorky__pravidla {
     background-color: #1fcca4;
-    padding: 10px;
+    padding: 12px;
     display: flex;
-    margin: 1;
+    margin: 1px 0px;
     justify-content: center;
-    align-items: stretch;
   }
 
   .piskvorky__hrat {
     background-color: #0197f6;
-    padding: 10px;
+    padding: 12px;
     display: flex;
     flex-wrap: wrap;
-    margin: 1;
     justify-content: center;
-    align-items: stretch;
   }
 
   a {
     text-decoration: none;
+  }
+
+  a.piskvorky__pravidla:hover {
+    background-color: #1cbb96;
+  }
+
+  a.piskvorky__hrat:hover {
+    background-color: #0090e9;
   }
