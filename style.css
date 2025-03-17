@@ -1,1 +1,14 @@
+h1 {
+  font-family: "Lobster";
+}
 
+body {
+  background: linear-gradient(to bottom left, #615dad, #ffc8da);
+  height: 100vh;
+  margin: 0;
+}
+
+h1,
+p {
+  color: #ffffff;
+}
