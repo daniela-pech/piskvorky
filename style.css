@@ -1,82 +1,84 @@
 * {
   box-sizing: border-box;
+}
 
-  h1 {
-    font-family: "Lobster";
-    font-weight: lighter;
-    font-size: 45px;
-  }
+h1 {
+  font-family: "Lobster";
+  font-weight: lighter;
+  font-size: 42px;
+}
 
-  p {
-    line-height: 1.5;
-  }
+p {
+  line-height: 1.5;
+  padding-bottom: 13px;
+}
 
-  body {
-    background: linear-gradient(to bottom left, #615dad, #ffc8da);
-    height: 100vh;
-    margin: 0;
-  }
+body {
+  background: linear-gradient(to bottom left, #615dad, #ffc8da);
+  height: 100vh;
+  margin: 0;
+}
 
-  h1,
-  p,
-  a {
-    color: #ffffff;
-  }
+h1,
+p,
+a {
+  color: #ffffff;
+}
 
-  .piskvorky {
-    display: flex;
-    flex-direction: column;
-    width: 335px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
-    background-color: #283e50;
-    border-radius: 5px 5px 0px 0px;
-    align-items: stretch;
+.piskvorky {
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  background-color: #283e50;
+  border-radius: 5px 5px 0px 0px;
+  align-items: stretch;
 
-  }
+}
 
-  img {
-    width: 100%;
-    border-radius: 5px 5px 0px 0px;
-  }
+img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
 
-  .piskvorky__text {
-    text-align: center;
-  }
+.piskvorky__text {
+  text-align: center;
+}
 
-  p,
-  a {
-    font-size: 15px;
-    font-family: sans-serif;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
+p,
+a {
+  font-size: 15px;
+  font-family: sans-serif;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
-  .piskvorky__pravidla {
-    background-color: #1fcca4;
-    padding: 12px;
-    display: flex;
-    margin: 1px 0px;
-    justify-content: center;
-  }
+.piskvorky__pravidla {
+  background-color: #1fcca4;
+  padding: 12px;
+  display: flex;
+  margin: 1px 0px;
+  justify-content: center;
+}
 
-  .piskvorky__hrat {
-    background-color: #0197f6;
-    padding: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.piskvorky__hrat {
+  background-color: #0197f6;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  a.piskvorky__pravidla:hover {
-    background-color: #1cbb96;
-  }
+a.piskvorky__pravidla:hover {
+  background-color: #1cbb96;
+}
 
-  a.piskvorky__hrat:hover {
-    background-color: #0090e9;
-  }
+a.piskvorky__hrat:hover {
+  background-color: #0090e9;
+}
