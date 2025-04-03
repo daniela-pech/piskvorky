@@ -1,5 +1,8 @@
-* {
+*,
+:before,
+:after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 h1 {
@@ -15,14 +18,12 @@ p {
 
 body {
   background: linear-gradient(to bottom left, #615dad, #ffc8da);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   margin: 0;
-}
-
-h1,
-p,
-a {
   color: #ffffff;
+  font-family: sans-serif;
 }
 
 .piskvorky {
@@ -35,7 +36,6 @@ a {
   background-color: #283e50;
   border-radius: 5px 5px 0px 0px;
   align-items: stretch;
-
 }
 
 img {
@@ -53,6 +53,7 @@ a {
   font-family: sans-serif;
   padding-right: 10px;
   padding-left: 10px;
+  color: #ffffff
 }
 
 .piskvorky__pravidla {
@@ -81,4 +82,80 @@ a.piskvorky__pravidla:hover {
 
 a.piskvorky__hrat:hover {
   background-color: #0090e9;
+}
+
+.hra {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 80vmin;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hra__nadpis {
+  text-align: center;
+  padding: 5vh;
+}
+
+.hra__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.hra__hrac {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.hra__ikony {
+  display: flex;
+  border: none;
+  border-radius: 2%;
+}
+
+.home {
+  background-color: #1fcca4;
+  padding: 2%;
+  border-radius: 15%;
+}
+
+.restart {
+  background-color: #0197f6;
+  padding: 2%;
+  border-radius: 15%;
+}
+
+a.home:hover,
+a.home:focus {
+  background-color: #1cbb96;
+}
+
+a.restart:hover,
+a.restart:focus {
+  background-color: #0090e9;
+}
+
+.hra__pole {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+}
+
+.hra__tlacitko {
+  flex-basis: 10%;
+  aspect-ratio: 1;
+  opacity: 0.5;
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+.hra__tlacitko:hover,
+.hra__tlacitko:focus {
+  background-color: rgb(248, 223, 213);
 }
