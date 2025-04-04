@@ -123,22 +123,26 @@ a.piskvorky__hrat:hover {
   background-color: #1fcca4;
   padding: 2%;
   border-radius: 15%;
+  border: 1vh solid #1fcca4;
 }
 
 .restart {
   background-color: #0197f6;
   padding: 2%;
   border-radius: 15%;
+  border: 1vh solid #0197f6;
 }
 
 a.home:hover,
 a.home:focus {
   background-color: #1cbb96;
+  border: 1vh solid #1cbb96;
 }
 
 a.restart:hover,
 a.restart:focus {
   background-color: #0090e9;
+  border: 1vh solid #0090e9;
 }
 
 .hra__pole {
