@@ -35,11 +35,11 @@ HRAJE: <img src="images/circle.svg" alt="kolečko" class="hrac__bila">
   });
 });
 
-const restartButton = document.querySelector('.restart');
-
-restartButton.addEventListener('click', (event) => {
+const restartElement = document.querySelector('.restart');
+restartElement.addEventListener('click', (event) => {
   const nacistZnovu = confirm('Opravdu chceš začít znovu?');
-  if (nacistZnovu == false) {
+  if (nacistZnovu == true) {
+  } else {
     event.preventDefault();
   }
 });
