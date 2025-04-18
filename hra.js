@@ -38,7 +38,7 @@ HRAJE: <img src="images/circle.svg" alt="kolečko" class="hrac__bila">
 const restartElement = document.querySelector('.restart');
 restartElement.addEventListener('click', (event) => {
   const nacistZnovu = confirm('Opravdu chceš začít znovu?');
-  if (nacistZnovu == true) {
+  if (nacistZnovu === true) {
   } else {
     event.preventDefault();
   }
