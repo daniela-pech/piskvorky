@@ -1,3 +1,4 @@
+/*vsechny soubory*/
 *,
 :before,
 :after {
@@ -26,6 +27,7 @@ body {
   font-family: sans-serif;
 }
 
+/*uvodni stranka index.html*/
 .piskvorky {
   display: flex;
   flex-direction: column;
@@ -84,6 +86,7 @@ a.piskvorky__hrat:hover {
   background-color: #0090e9;
 }
 
+/*stranka hra.html*/
 .hra {
   display: flex;
   flex-direction: column;
