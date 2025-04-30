@@ -9,29 +9,18 @@ const buttonElements = document.querySelectorAll('.hra__tlacitko');
 
 buttonElements.forEach((button) => {
   button.addEventListener('click', (event) => {
-    const button = event.target;
-    if (button.disabled) {
-      return;
-    }
-    if (currentPlayer === 'circle') {
-      button.classList.add('hra__pole--kolecko');
-    } else {
-      button.classList.add('hra__pole--krizek');
-    }
-
-    button.disabled = true;
+    const clickedButton = event.target;
 
     if (currentPlayer === 'circle') {
+      clickedButton.classList.add('hra__tlacitko--kolecko');
       currentPlayer = 'cross';
-      kdoHraje.innerHTML = `
-HRAJE: <img src="images/cross.svg" alt="křížek" class="hrac__bila">
-`;
+      kdoHraje.innerHTML = `HRAJE: <img src="images/cross.svg" alt="křížek" class="hrac__bila">`;
     } else {
+      clickedButton.classList.add('hra__tlacitko--krizek');
       currentPlayer = 'circle';
-      kdoHraje.innerHTML = `
-HRAJE: <img src="images/circle.svg" alt="kolečko" class="hrac__bila">
-`;
+      kdoHraje.innerHTML = `HRAJE: <img src="images/circle.svg" alt="kolečko" class="hrac__bila">`;
     }
+    clickedButton.disabled = true;
   });
 });
 
