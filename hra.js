@@ -54,6 +54,12 @@ buttonElements.forEach((button) => {
         location.reload();
       }, 500);
     }
+
+    if (currentPlayer === 'cross') {
+      setTimeout(() => {
+        hrajeProtihrac();
+      }, 500);
+    }
   });
 });
 
@@ -66,3 +72,43 @@ restartElement.addEventListener('click', (event) => {
     event.preventDefault();
   }
 });
+
+// tah protihráče - získání dat z API
+const tahProtihrace = async (board) => {
+  const response = await fetch(
+    'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        board: board,
+        player: 'x',
+      }),
+    },
+  );
+
+  const data = await response.json();
+  return data.position;
+};
+
+// hraje křížek (protihráč)
+const hrajeProtihrac = async () => {
+  const zjednodusenaPolicka = Array.from(buttonElements).map((policko) => {
+    if (policko.classList.contains('hra__tlacitko--krizek')) {
+      return 'x';
+    }
+    if (policko.classList.contains('hra__tlacitko--kolecko')) {
+      return 'o';
+    }
+    return '_';
+  });
+
+  const vitez = findWinner(zjednodusenaPolicka);
+  if (vitez !== null) return;
+
+  const pozice = await tahProtihrace(zjednodusenaPolicka);
+  const index = pozice.x + pozice.y * 10;
+  buttonElements[index].click();
+};
